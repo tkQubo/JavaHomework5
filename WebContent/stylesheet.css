@@ -1,0 +1,108 @@
+@CHARSET "UTF-8";
+
+body { color: #444; background-color: #EEE; margin: 0em; }
+.title {
+	width: 100%; padding-left: 1em; margin: 0em;
+	line-height: 2em; font-size: 2em; color: #555; background-color: #CCC;
+}
+.form {
+	border: solid thin #DDD;
+	text-align: left;
+	border: solid thin #DDD;
+	background-color: #E8E8E8;
+	padding: 1em;
+}
+.body { padding: 1em; }
+.error {
+	font-weight: bold;
+	font-size: 0.8em;
+	color: red;
+	margin-bottom: 1em;
+	margin-left: 1em;
+	padding: 0.2em;
+}
+.warn {
+	font-weight: bold;
+	font-size: 0.8em;
+	color: brown;
+	margin-bottom: 1em;
+	margin-left: 1em;
+	padding: 0.2em;
+}
+
+.info {
+	font-weight: bold;
+	font-size: 0.8em;
+	color: green;
+	background-color: #AFA;
+	border: solid thin green;
+	margin-bottom: 1em;
+	padding: 0.2em;
+}
+.login-form {
+	width: 12em;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -6em;
+	margin-top: -6em;
+}
+.login-form-contents { position: relative; }
+.form-label { font-weight: bold; font-size: 0.8em; }
+.form-description { font-size: 0.8em; }
+.input-text { display: block; border: solid thin gray; width: 12em; }
+.input-text-match { border: solid thin gray; width: 6em; }
+.input-submit { border: solid thin gray; padding: 0em 0.5em; }
+.form-row { width: 100%; text-align: right; }
+.readonly { background-color: #CCC; color: #444; }
+.auto { background-color: #CCC; color: white; }
+
+#menu ul{
+	margin: 0em; padding: 0em; list-style: none;
+}
+#menu li{
+	margin: 0em; padding: 0em; display: inline;
+}
+#menu a{
+	display: block;
+	background-color: #999;
+
+	padding: 0.2em 1em;
+	text-decoration: none;
+	color: #EEE;
+	width: 150px;
+	margin: 1px 0;
+	text-align: left;
+}
+#menu a:hover{
+	background-color: #333;
+}
+
+.form-select { width: 20em; }
+#update-table th { text-align: left; }
+
+.column-userid { width: 4em; }
+.column-username { width: 12em; }
+.column-tel { width: 8em; }
+.column-pass { width: 12em; }
+
+.select-result { background-color: #E8E8E8; border-color: #DDD; }
+#query-table {
+	margin: 0;
+	margin-left: 2em;
+}
+#query-table th { text-align: right; }
+
+.form-dispatch { width: 20em; }
+
+#edit-user-table { width: 20em; }
+#edit-user-table th { text-align: right; width: 10em; }
+#update-user-table { width: 40em; }
+#update-user-table th { text-align: right; }
+#update-user-table-before { border: solid thin gray; margin: .5em; }
+#update-user-table-after { border: solid thin gray; margin: .5em; }
+.update-state { text-align: left; color: red; }
+.required { color: red; font-weight: bold; }
+
+.form-lump { width: 50em; }
+.changed-count { color: blue; font-weight: bold; }
