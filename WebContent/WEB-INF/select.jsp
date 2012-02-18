@@ -1,5 +1,7 @@
+<%@page import="com.qubo.caea05.dao.criteria.StringMatchingType"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<% pageContext.setAttribute("matchingTypes", StringMatchingType.values()); %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -42,10 +44,14 @@
 				</td>
 				<td>
 					<select name="usernameMatchType" class="input-text-match">
-						<option value="Contains"${(param.usernameMatchType eq 'Contains')?' selected':''}>部分一致</option>
-						<option value="Exact"${(param.usernameMatchType eq 'Exact')?' selected':''}>完全一致</option>
-						<option value="StartsWith"${(param.usernameMatchType eq 'StartsWith')?' selected':''}>前方一致</option>
-						<option value="EndsWith"${(param.usernameMatchType eq 'EndsWith')?' selected':''}>後方一致</option>
+						<c:forEach var="type" items="${matchingTypes}">
+							<c:if test="${param.usernameMatchType eq type}">
+								<option value="${type}" selected="selected">${type.label}</option>
+							</c:if>
+							<c:if test="${param.usernameMatchType ne type}">
+								<option value="${type}">${type.label}</option>
+							</c:if>
+						</c:forEach>
 					</select>
 				</td>
 			</tr>
@@ -58,10 +64,14 @@
 				</td>
 				<td>
 					<select name="telMatchType" class="input-text-match">
-						<option value="Contains"${(param.telMatchType eq 'Contains')?' selected':''}>部分一致</option>
-						<option value="Exact"${(param.telMatchType eq 'Exact')?' selected':''}>完全一致</option>
-						<option value="StartsWith"${(param.telMatchType eq 'StartsWith')?' selected':''}>前方一致</option>
-						<option value="EndsWith"${(param.telMatchType eq 'EndsWith')?' selected':''}>後方一致</option>
+						<c:forEach var="type" items="${matchingTypes}">
+							<c:if test="${param.telMatchType eq type}">
+								<option value="${type}" selected="selected">${type.label}</option>
+							</c:if>
+							<c:if test="${param.telMatchType ne type}">
+								<option value="${type}">${type.label}</option>
+							</c:if>
+						</c:forEach>
 					</select>
 				</td>
 			</tr>

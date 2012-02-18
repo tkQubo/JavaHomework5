@@ -30,7 +30,7 @@
 			<td><input type="text" value="自動で設定されます" class="input-text auto" readonly="readonly" disabled="disabled" /></td>
 		</tr>
 		<tr>
-			<th class="form-label">名前:</th>
+			<th class="form-label"><span class="required">※</span>名前:</th>
 			<td><input type="text" name="username" value="${param.username}" class="input-text" id="username" maxlength="12" /></td>
 		</tr>
 		<tr>
